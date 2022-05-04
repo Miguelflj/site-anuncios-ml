@@ -4,3 +4,4 @@ from django.contrib import admin
 from ml_anuncios import models
 
 admin.site.register(models.Category)
+admin.site.register(models.Ad)
