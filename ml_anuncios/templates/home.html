@@ -1,67 +1,24 @@
-<!DOCTYPE html>
-<html lang="pt-br"> 
-  <head>
-        <meta charset='utf-8'/>
-        <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
-        <title>Home</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css" />
-        <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script>
-    </head>
-    <body>
-        <div class="ui inverted teal attached menu">
-            <a class="item">ML Anúncios</a>
-            <div class="right menu">
-                <div class="ui rigth aligned category search item">
-                    <div class="ui inverted transparent icon input">
-                        <input class="prompt" type="text" placeholder="O que você deseja... ?"/>
-                    </div>
-                    <i class="search link icon"></i>
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="ui three column grid">
+    {% for anuncio in anuncios %}
+        <div class="column">
+            <div class="ui fluid card">
+                <div class="image">
+                    <img src="{% static '/ml_anuncios/img/no_image.jpg' %}"
+                         alt="image"
+                         height="120"
+                         width="120  "/>
                 </div>
-                <div class="results"></div>
-            </div>
-        </div>
-    <div class="ui hidden divider"></div>
-    <div class="ui container">
-        <div class="ui stackable grid">
-            <div class="four wide column">
-                <div class="ui inverted teal vertical fluid menu">
-                    <a class="item">Imóveis</a>
-                    <a class="item">Informática</a>
+                <div class="content">
+                    <a class="header">{{ anuncio }}</a>
                 </div>
-            </div>
-            <div class="twelve wide column">
-                <div class="ui grid">
-                    <div class="four wide column">
-                        <div class="ui card">
-                            <div class="image">
-                                <img src="ml_anuncios/static/img/no_image.jpg" alt="image" height="120" width="120  "/>
-                            </div>
-                            <div class="content">
-                                <a class="header">Notebook i7</a>
-                            </div>
-                            <div class="extra content">
-                                <span class="ui medium green text">R$ 2300,00</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="four wide column">
-                      <div class="ui card">
-                          <div class="image">
-                              <img src="ml_anuncios/static/img/no_image.jpg" alt="image" height="120" width="120  "/>
-                          </div>
-                          <div class="content">
-                              <a class="header">Notebook i7</a>
-                          </div>
-                          <div class="extra content">
-                              <span class="ui medium green text">R$ 2300,00</span>
-                          </div>
-                      </div>
-                  </div>
+                <div class="extra content">
+                    <span class="ui medium green text">R$ {{ anuncio.price }}</span>
                 </div>
             </div>
         </div>
-    </div>
-</body>
-</html>
+    {% endfor %}
+</div>
+{% endblock content %}
