@@ -19,6 +19,14 @@
                 </div>
             </div>
         </div>
+    {% empty %}
+    
+        <div class="ui hidden divider"></div>
+        
+        <div class="ui inverted red segment header">
+            <p>Nenhum anúncio encontrado!</p>
+        </div>
+    
     {% endfor %}
 </div>
 {% endblock content %}

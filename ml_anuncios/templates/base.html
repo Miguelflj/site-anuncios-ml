@@ -14,7 +14,7 @@
     </head>
     <body>
         <div class="ui inverted teal attached menu">
-            <a class="item">ML Anúncios</a>
+            <a href="{% url 'home' %}" class="item">ML Anúncios</a>
             <div class="right menu">
                 <div class="ui rigth aligned category search item">
                     <div class="ui inverted transparent icon input">
@@ -31,11 +31,17 @@
                 <div class="four wide column">
                     <div class="ui inverted teal vertical fluid menu">
                         {% for categoria in categorias %}
-                            <a class="item">{{ categoria }}</a>
+                            <a href="{% url 'categoria' categoria.id %}" class="item">{{ categoria }}</a>
                         {% endfor %}
                     </div>
                 </div>
+                
                 <div class="twelve wide column">
+                    {% if categoria %}
+                        <div class="ui center aligned inverted blue segment header">
+                            <h1>{{ categoria }}</h1>
+                        </div>
+                    {% endif %}
                     {% block content %}
                     {% endblock content %}
                 </div>
