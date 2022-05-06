@@ -3,7 +3,7 @@
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
 ## 🛠️ Abrir e rodar o projeto
-- Baixa baixar este repositório
+- Clonar este repositório
 - Dentro do diretório principal do projeto executar
 ```
 pip install -r requirements.txt
