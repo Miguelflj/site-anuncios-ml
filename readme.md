@@ -11,6 +11,6 @@ python3 manage.py runserver
 ```
 - Pronto, o site estara rodando localhost e você poderá implementar mais funcionalidades.
 ## Tecnologias
-- ``Python 3.7``
+- ``Python 3.8.10``
 - ``Django``
 - ``Fomantic-UI``
