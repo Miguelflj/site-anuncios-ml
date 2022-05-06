@@ -26,5 +26,5 @@ def categoria(request,categoria_id):
 
 def anuncio(request,anuncio_id):
     anuncio = get_object_or_404(Ad, id=anuncio_id)
-    
-    return render(request, 'home.html', {'categorias': categories, 'anuncios':ads, 'categoria':categoria})
+    categories = Category.objects.all()
+    return render(request, 'anuncio.html', {'categorias':categories,'anuncio': anuncio})

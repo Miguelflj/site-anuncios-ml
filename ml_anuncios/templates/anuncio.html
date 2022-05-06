@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div class="ui center aligned inverted green segment header">
+        <h1>{{ anuncio }}
+            <div class="sub header">Anunciado em: {{ anuncio.criado_em }}</div>
+        </h1>
+    </div>
+    <div class="ui grid">
+        <div class="sexteen wide column">
+            <div class="ui image">
+                <img src="{% static '/ml_anuncios/img/no_image.jpg' %}"
+                     alt="image"
+                     height="1080"
+                     width="860"/>
+            </div>
+        </div>
+    </div>
+    <div class="sexteen wide column">
+        
+        <div class="ui center aligned inverted green segment header">
+            <h3 class="ui header">R$ {{ anuncio.price }}</h3>
+            </div>
+        <div class="ui center aligned inverted green segment header">
+        <h3 class="ui header">Descrição</h3>
+        </div>
+        {% if anuncio.describe %}
+        <p>
+            {{ anuncio.describe }}
+        </p>
+        {% else %}
+        <p>Este anúncio não possuí descrição.</p>
+        {% endif %}
+    </div>
+{% endblock content %}
