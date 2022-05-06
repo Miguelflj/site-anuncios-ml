@@ -5,12 +5,12 @@
 ## 🛠️ Abrir e rodar o projeto
 - Baixa baixar este repositório
 - Dentro do diretório principal do projeto executar
-'''
+```
 pip install -r requirements.txt
 python3 manage.py runserver
-'''
+```
 -Pronto, o site estara rodando localhost e você poderá implementar mais funcionalidades.
 ## Tecnologias
--``Python 3.7``
--``Django``
--``Fomantic-UI``
+- ``Python 3.7``
+- ``Django``
+- ``Fomantic-UI``
