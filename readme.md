@@ -7,9 +7,9 @@
 - Dentro do diretório principal do projeto executar
 ```
 pip install -r requirements.txt
-python3 manage.py runserver
 python3 manage.py migrate
 python3 manage.py createsuperuser
+python3 manage.py runserver
 ```
 - Pronto, o site estara rodando localhost e você poderá implementar mais funcionalidades.
 ## Tecnologias
