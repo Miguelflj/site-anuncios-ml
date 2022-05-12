@@ -8,6 +8,8 @@
 ```
 pip install -r requirements.txt
 python3 manage.py runserver
+python3 manage.py migrate
+python3 manage.py createsuperuser
 ```
 - Pronto, o site estara rodando localhost e você poderá implementar mais funcionalidades.
 ## Tecnologias
